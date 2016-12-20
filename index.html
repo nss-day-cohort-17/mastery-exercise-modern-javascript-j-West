@@ -4,13 +4,89 @@
     <meta charset="utf-8">
     <title>BattleDome</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="quiz.css">
 
   </head>
   <body>
+    <div class="container">  <!-- Start main container -->
+      <section class="firstView">  <!-- Start first view -->
+        <div class="row name-inputs">  <!-- Start row 1 -->
+          <div class="input-group input-group-lg fix-width">
+            <div class="col-sm-5">
+              <label for="robot1">Please enter a name for the first fighter</label>
+              <input type="text" class="form-control" id="robot1" placeholder="Robot 1">
+              <select class="selectpicker select-pos">
+                <optgroup label="Picnic">
+                  <option>Hello</option>
+                  <option>Ketchup</option>
+                  <option>Relish</option>
+                </optgroup>
+                <optgroup label="Camping">
+                  <option>Tent</option>
+                  <option>Flashlight</option>
+                  <option>Toilet Paper</option>
+                </optgroup>
+              </select>
+            </div>
 
+            <div class="col-sm-5 col-sm-offset-1">
+              <label for="robot2">Please enter a name for the second fighter</label>
+              <input type="text" class="form-control" id="robot2" placeholder="Robot 2">
+              <select class="selectpicker select-pos">
+                <optgroup label="Picnic">
+                  <option>Mustard</option>
+                  <option>Ketchup</option>
+                  <option>Relish</option>
+                </optgroup>
+                <optgroup label="Camping">
+                  <option>Tent</option>
+                  <option>Flashlight</option>
+                  <option>Toilet Paper</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>  <!-- End row 1 -->
+
+
+
+
+        <div class="row robot-example">  <!-- Start row 2 -->
+          <div class="col-sm-6 col-md-5">
+            <div class="thumbnail">
+              <img src="..." alt="...">
+              <div class="caption">
+                <h3>Robot #1</h3>
+
+                <p>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-5 col-md-offset-1">
+            <div class="thumbnail">
+              <img src="..." alt="...">
+              <div class="caption">
+                <h3>Robot #2</h3>
+
+                <p>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- End row 2  -->
+      </section>  <!-- End first view -->
+
+      <section class="secondView">  <!-- Start second view -->
+        
+      </section>  <!-- End second view -->
+    </div>  <!-- End main container -->
 
     <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.min.js" charset="utf-8"></script>
     <script src="quiz.js" charset="utf-8"></script>
   </body>
 </html>
