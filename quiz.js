@@ -18,8 +18,14 @@ $("#toBattle").click((e) => {
     flag++;
     console.log(robot1);
     console.log(robot2);
- } else {
+ }else {
+    if (robot1.health <= 0 || robot2.health <= 0) {
+      
+    }
 
+
+    $("h3").first().html("Robot1 Health: " + (robot1.health -= robot2.damage));
+    $("h3").last().html("Robot2 Health: " + (robot2.health -= robot1.damage));
 
 
  }
