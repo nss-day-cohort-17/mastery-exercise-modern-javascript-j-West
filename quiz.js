@@ -26,9 +26,15 @@ $("#toBattle").click((e) => {
 
     robot1 = new BattleDome.Fighters[selectedR1];
     robot2 = new BattleDome.Fighters[selectedR2];
+
+    robot1.playerName = $("#robot1").val();
+    robot2.playerName = $("#robot2").val();
+
     $("#toBattle").text("Attack!");
-    $("h3").first().html("Robot1 Health: " + robot1.health);
-    $("h3").last().html("Robot2 Health: " + robot2.health);
+
+    $("h3").first().html(robot1.playerName + " Health: " + robot1.health);
+    $("h3").last().html(robot2.playerName + " Health: " + robot2.health);
+
     flag++;
 
     }
