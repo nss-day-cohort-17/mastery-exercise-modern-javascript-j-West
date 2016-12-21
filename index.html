@@ -9,6 +9,13 @@
 
   </head>
   <body>
+    <div class="jumbotron hidden-class">
+      <div class="container">
+        <h2></h2>
+
+      </div>
+    </div>
+
     <div class="container">  <!-- Start main container -->
       <section class="firstView">
         <div class="row name-inputs">  <!-- Start row 1 -->
@@ -17,17 +24,17 @@
               <label for="robot1">Please enter a name for the first fighter</label>
               <input type="text" class="form-control" id="robot1" placeholder="If left blank, a random name will be assigned for you">
               <select class="selectpicker select-pos" id="selection1" title="Choose the type of robot">
-                <optgroup label="Robot1">
-                  <option>Robot1Model1</option>
-                  <option>Robot1Model2</option>
+                <optgroup label="D7R2">
+                  <option>D7R2_Alpha</option>
+                  <option>D7R2_Bravo</option>
                 </optgroup>
-                <optgroup label="Robot2">
-                  <option>Robot2Model1</option>
-                  <option>Robot2Model2</option>
+                <optgroup label="B3B0">
+                  <option>B3B0_Alpha</option>
+                  <option>B3B0_Bravo</option>
                 </optgroup>
-                <optgroup label="Robot3">
-                  <option>Robot3Model1</option>
-                  <option>Robot3Model2</option>
+                <optgroup label="T2D8">
+                  <option>T2D8_Alpha</option>
+                  <option>T2D8_Bravo</option>
                 </optgroup>
               </select>
             </div>
@@ -36,26 +43,29 @@
               <label for="robot2">Please enter a name for the second fighter</label>
               <input type="text" class="form-control" id="robot2" placeholder="If left blank, a random name will be assigned for you">
               <select class="selectpicker select-pos" id="selection2" title="Choose the type of robot">
-                <optgroup label="Robot1">
-                  <option>Robot1Model1</option>
-                  <option>Robot1Model2</option>
+                <optgroup label="D7R2">
+                  <option>D7R2_Alpha</option>
+                  <option>D7R2_Bravo</option>
                 </optgroup>
-                <optgroup label="Robot2">
-                  <option>Robot2Model1</option>
-                  <option>Robot2Model2</option>
+                <optgroup label="B3B0">
+                  <option>B3B0_Alpha</option>
+                  <option>B3B0_Bravo</option>
                 </optgroup>
-                <optgroup label="Robot3">
-                  <option>Robot3Model1</option>
-                  <option>Robot3Model2</option>
+                <optgroup label="T2D8">
+                  <option>T2D8_Alpha</option>
+                  <option>T2D8_Bravo</option>
                 </optgroup>
               </select>
             </div>
           </div>
         </div>  <!-- End row 1 -->
+      </section>
+      <div class="">
+
+      </div>
+
 
         <button type="button" class="btn btn-warning space" id="toBattle" disabled>Click to start battle!</button>
-
-
 
         <div class="row robot-example hidden-class">  <!-- Start row 2 -->
           <div class="col-sm-6 col-md-5">
@@ -74,11 +84,6 @@
             </div>
           </div>
         </div>  <!-- End row 2 -->
-
-
-      </section>
-
-
     </div>  <!-- End main container -->
 
     <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
