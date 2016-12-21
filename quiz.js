@@ -1,5 +1,3 @@
-// var robot1 = new BattleDome.Fighters.Robot();
-// var robot2 = new BattleDome.Fighters.Robot();
 var robot1;
 var robot2;
 var selectedR1 = "";
@@ -9,11 +7,31 @@ var flag = 0;
 function healthChecks(robot) {
   if (robot.health <= 0) {
     $(".firstView").toggle();
-    $(".jumbotron").toggle();
+    $("#toBattle").toggle();
+    $("h2").toggle();
     $("#toBattle").attr("disabled", "disabled");
     return false;
   } else return true;
 }
+
+function inputCheck() {
+  if (selectedR1 !== "" && selectedR2 !== "") {
+    $("#toBattle").removeAttr("disabled");
+
+  }
+}
+
+$("#selection1").change((e) => {
+  selectedR1 = e.target.value;
+  inputCheck();
+  console.log(selectedR1);
+});
+
+$("#selection2").change((e) => {
+  selectedR2 = e.target.value;
+  inputCheck();
+  console.log(selectedR2);
+});
 
 
 $("#toBattle").click((e) => {
@@ -32,46 +50,26 @@ $("#toBattle").click((e) => {
 
     $("#toBattle").text("Attack!");
 
-    $("h3").first().html(robot1.playerName + " Health: " + robot1.health);
-    $("h3").last().html(robot2.playerName + " Health: " + robot2.health);
+    $("h1").first().html(robot1.playerName + " Health: " + robot1.health);
+    $("h1").last().html(robot2.playerName + " Health: " + robot2.health);
 
     flag++;
 
-    // console.log(robot1);
-    // console.log(robot2);
-
   }else {
-    $("h3").first().html(robot1.playerName + " Health: " + (robot1.health -= robot2.damage));
+    $("h1").first().html(robot1.playerName + " Health: " + (robot1.health -= robot2.damage));
 
     if (!healthChecks(robot1)) {
-      $("h2").html(`${robot2.playerName}, a ${robot2.name} defeated ${robot1.playerName}, a ${robot1.name}`);
+      $("h1").first().html(robot1.playerName + " Health: 0");
+      $("h2").html(`${robot2.playerName}, a ${robot2.name} robot defeated ${robot1.playerName}, a ${robot1.name} robot`);
       return;
     }
 
-    $("h3").last().html(robot2.playerName + " Health: " + (robot2.health -= robot1.damage));
+    $("h1").last().html(robot2.playerName + " Health: " + (robot2.health -= robot1.damage));
 
       if (!healthChecks(robot2)) {
-        $("h2").html(`${robot1.playerName}, a ${robot1.name} defeated ${robot2.playerName}, a ${robot2.name}`);
+        $("h1").last().html(robot2.playerName + " Health: 0");
+        $("h2").html(`${robot1.playerName}, a ${robot1.name} robot defeated ${robot2.playerName}, a ${robot2.name} robot`);
         return;
       }
   }
 });
-
-function inputCheck() {
-  if (selectedR1 !== "" && selectedR2 !== "") {
-    $("#toBattle").removeAttr("disabled");
-
-  }
-}
-
-  $("#selection1").change((e) => {
-    selectedR1 = e.target.value;
-    inputCheck();
-    console.log(selectedR1);
-  });
-
-    $("#selection2").change((e) => {
-      selectedR2 = e.target.value;
-      inputCheck();
-      console.log(selectedR2);
-    });
