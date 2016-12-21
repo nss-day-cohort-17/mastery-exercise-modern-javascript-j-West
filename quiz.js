@@ -37,24 +37,41 @@ $("#toBattle").click((e) => {
 
     flag++;
 
+    // console.log(robot1);
+    // console.log(robot2);
+
+  }else {
+    $("h3").first().html(robot1.playerName + " Health: " + (robot1.health -= robot2.damage));
+
+    if (!healthChecks(robot1)) {
+      $("h2").html(`${robot2.playerName}, a ${robot2.name} defeated ${robot1.playerName}, a ${robot1.name}`);
+      return;
     }
 
+    $("h3").last().html(robot2.playerName + " Health: " + (robot2.health -= robot1.damage));
+
+      if (!healthChecks(robot2)) {
+        $("h2").html(`${robot1.playerName}, a ${robot1.name} defeated ${robot2.playerName}, a ${robot2.name}`);
+        return;
+      }
+  }
 });
 
 function inputCheck() {
   if (selectedR1 !== "" && selectedR2 !== "") {
-    $("#toBattle").removeAttr("disabled")
+    $("#toBattle").removeAttr("disabled");
+
   }
 }
 
   $("#selection1").change((e) => {
     selectedR1 = e.target.value;
-    inputCheck()
+    inputCheck();
     console.log(selectedR1);
   });
 
     $("#selection2").change((e) => {
       selectedR2 = e.target.value;
-      inputCheck()
+      inputCheck();
       console.log(selectedR2);
     });
