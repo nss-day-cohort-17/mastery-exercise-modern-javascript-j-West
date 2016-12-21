@@ -6,6 +6,16 @@ var selectedR1 = "";
 var selectedR2 = "";
 var flag = 0;
 
+function healthChecks(robot) {
+  if (robot.health <= 0) {
+    $(".firstView").toggle();
+    $(".jumbotron").toggle();
+    $("#toBattle").attr("disabled", "disabled");
+    return false;
+  } else return true;
+}
+
+
 $("#toBattle").click((e) => {
   if (flag === 0) {
     $(".robot-example").toggle();
@@ -16,15 +26,8 @@ $("#toBattle").click((e) => {
     $("h3").first().html("Robot1 Health: " + robot1.health);
     $("h3").last().html("Robot2 Health: " + robot2.health);
     flag++;
-    console.log(robot1);
-    console.log(robot2);
- }else {
-    if (robot1.health <= 0 || robot2.health <= 0) {
 
     }
-    $("h3").first().html("Robot1 Health: " + (robot1.health -= robot2.damage));
-    $("h3").last().html("Robot2 Health: " + (robot2.health -= robot1.damage));
- }
 
 });
 
