@@ -17,6 +17,10 @@ function healthChecks(robot) {
 
 
 $("#toBattle").click((e) => {
+  if ($("#robot1").val() === "" || $("#robot2").val() === "") {
+    alert("Just kidding, please enter a name for each robot before continuing");
+    return;
+  }
   if (flag === 0) {
     $(".robot-example").toggle();
 
