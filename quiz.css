@@ -1,0 +1,50 @@
+body {
+  background: url(images/virtual-reality-1802469.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+label, h2, h1 {
+  color: #FFF;
+}
+
+h2 {
+  margin: 5em 0;
+}
+
+.centered{
+  text-align: center;
+}
+
+.fix-width {
+  width: 100%;
+}
+
+.select-pos {
+  margin: 1em auto;
+}
+
+.name-inputs {
+  margin-top: 5em;
+}
+
+.robot-example {
+  margin-top: 10em;
+}
+
+.space {
+  display: block;
+  padding: 1em 3em;
+  margin: 2em auto;
+}
+
+.hidden-class {
+  display: none;
+}
+
+.floatL {
+  float: left;
+}
+
+.floatR {
+  float: right;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BattleDome</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="quiz.css">
+
+  </head>
+  <body>
+    <div class="container">  <!-- Start main container -->
+
+      <h2 class="hidden-class centered"></h2>
+      <section class="firstView">
+        <div class="row name-inputs">  <!-- Start row 1 -->
+          <div class="input-group input-group-lg fix-width">
+            <div class="col-sm-5">
+              <label for="robot1">Please enter a name for the first fighter</label>
+              <input type="text" class="form-control" id="robot1" placeholder="If left blank, a random name will be assigned for you">
+              <select class="selectpicker select-pos" id="selection1" title="Choose the type of robot">
+                <optgroup label="D7R2">
+                  <option>D7R2_Alpha</option>
+                  <option>D7R2_Bravo</option>
+                </optgroup>
+                <optgroup label="B3B0">
+                  <option>B3B0_Alpha</option>
+                  <option>B3B0_Bravo</option>
+                </optgroup>
+                <optgroup label="T2D8">
+                  <option>T2D8_Alpha</option>
+                  <option>T2D8_Bravo</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="col-sm-5 col-sm-offset-1">
+              <label for="robot2">Please enter a name for the second fighter</label>
+              <input type="text" class="form-control" id="robot2" placeholder="If left blank, a random name will be assigned for you">
+              <select class="selectpicker select-pos" id="selection2" title="Choose the type of robot">
+                <optgroup label="D7R2">
+                  <option>D7R2_Alpha</option>
+                  <option>D7R2_Bravo</option>
+                </optgroup>
+                <optgroup label="B3B0">
+                  <option>B3B0_Alpha</option>
+                  <option>B3B0_Bravo</option>
+                </optgroup>
+                <optgroup label="T2D8">
+                  <option>T2D8_Alpha</option>
+                  <option>T2D8_Bravo</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>  <!-- End row 1 -->
+      </section>
+      <div class="">
+
+      </div>
+
+
+        <button type="button" class="btn btn-warning space" id="toBattle" disabled>Click to start battle!</button>
+
+        <div class="row robot-example hidden-class">  <!-- Start row 2 -->
+          <div class="floatL">
+            <h1></h1>
+          </div>
+
+          <div class="floatR">
+            <h1></h1>
+          </div>
+        </div>  <!-- End row 2 -->
+    </div>  <!-- End main container -->
+
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.min.js" charset="utf-8"></script>
+    <script src="robots.js" charset="utf-8"></script>
+    <script src="quiz.js" charset="utf-8"></script>
+  </body>
+</html>
